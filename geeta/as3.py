@@ -1,4 +1,5 @@
-a=3500
+
+a=int(raw_input("Enter the number:"))
 if ( a<999 ) :
 	if ( a>99 ) :
 		print "number is between 99 and 999"
