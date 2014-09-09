@@ -1,6 +1,10 @@
 import sys
+
+# getting inputs from commond line arguments 
+
 num = int(sys.argv[1])
 num1 = int(sys.argv[2])
+
 print num
 print num1
 
