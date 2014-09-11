@@ -1,7 +1,10 @@
+# this script to check if a number is even or odd
+
 def oddEven():
-    numInput = raw_input("Please type in a number: ")
     if(int(numInput)%2!= 0):
-        print "Odd number"
+        print numInput," is an odd number"
     else:
-        print "Even number"
-oddEven()
+        print numInput," is an even number"
+
+numInput = raw_input("Please type in a number: ")   
+oddEven(numInput)

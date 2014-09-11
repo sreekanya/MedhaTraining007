@@ -1,3 +1,6 @@
+## Using this script is to test the age of the person based on DOB 
+
+
 def processAge(bdEpo, myEpo):
     ageEpo = myEpo-bdEpo
     _month = ageEpo/2629744
@@ -6,6 +9,8 @@ def processAge(bdEpo, myEpo):
     print "your age is ", int(age),"years and ", months, " months"
 
 #    return (age,months)    
+
+## this funciton is to calcualte the age of the person. 
 
 def calcAge():
     import time
