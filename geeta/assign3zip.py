@@ -4,4 +4,4 @@ i=int(raw_input(" please enter the zipcode:")
 		print i
 else:
 	print "invalid entry"
-
+# it is printing that many times message.
