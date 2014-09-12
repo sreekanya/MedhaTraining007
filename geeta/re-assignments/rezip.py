@@ -3,7 +3,7 @@
 import re
 
 input1=raw_input("please enter the zip code you want to check:")
-pt=re.compile('[1-9][0-9][0-9][0-9][0-9]')
+pt=re.compile('[1-9][0-9][0-9][0-9][0-9]$')
 
 result=pt.match(input1)
 print result
