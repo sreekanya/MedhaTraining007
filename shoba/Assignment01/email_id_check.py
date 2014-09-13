@@ -5,7 +5,7 @@ import re
 
 emailAddress = (raw_input("enter a  email id")
 
-pt4=re.compile('[a-z]+[0-9]*[a-z]*@[a-z]+\.com$')  ### shoba12srinath@gmail.com or shoba12@gmail.com or shoba@yahoo.com 
+pt4 = re.compile('[a-z]+[0-9]*[a-z]*@[a-z]+\.com$')  ### shoba12srinath@gmail.com or shoba12@gmail.com or shoba@yahoo.com 
 
 ## shoba.srinath@gmail.com
 ## shoba_srinath@gmail.com
