@@ -7,3 +7,5 @@ pt= re.compile('^[a-z|A-Z]+\w+_.\w@[a-z]+.["com"|"biz"|"org"|"edu"|"co"|"au"|"uk
 result=pt.match(input1)
 
 print result
+
+# script not working for appi.geeta@
