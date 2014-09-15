@@ -2,7 +2,7 @@ import re
 #this code validates the email id
 #i'd like to know how can I make it case insensitive
 email=raw_input("Please type in your e-mail ID: ")
-pt=re.compile('^\w+.*_*@\w+.\w+.\w$')
+pt=re.compile('^[a-z|A-Z]+\w+\_*\.*\w@[a-z]+\.["com"|"biz"|"org"|"edu"|"co"|"au"|"uk"]+$')
 result = pt.match(email)
 print result
 if(result != None):

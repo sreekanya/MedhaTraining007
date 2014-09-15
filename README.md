@@ -1,8 +1,7 @@
-MedhaTraining007
-I'm adding something
-================
+MedhaTraining 007
 
-This repo created for medha Training007
+===========================================================================================
 
-Testing initial changes to read.me file 
+This project is created for training Medha Training batch, training batch will put their assignment qiuestions into git hub, part of this training they will learn how to use github & how to use various features associated with github.
+
 
