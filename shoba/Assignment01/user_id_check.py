@@ -2,9 +2,9 @@
 
 import re
 id_name= raw_input("enter a user id ")
-pt = re.compile('^[a-z]+[0-9]')
+pt = re.compile('^[a-z|A-Z|_]\w*')
 match1 = pt.match(id_name)
-if match != none:
-	print ("valid user id")
+if match1 != None:
+	print ("valid user id", id_name)
 else: 
-	print ("invalid user id")
+	print ("invalid user id",id_name)
