@@ -14,6 +14,6 @@ else:
 	print "able to find username"
 br.close()
 
-# result is usernam enot found
+# result is username not found
 	
 	
