@@ -6,7 +6,7 @@ import re
 input1=raw_input("pls enter the user name you want to check:")
 
 
-pt=re.compile('^[a-z|A-Z]*[a-z|A-Z|0-9\._-]*$')
+pt=re.compile('^[a-z|A-Z]+[a-z|A-Z|0-9\._-]*$')
 
 result=pt.match(input1)
 
