@@ -5,7 +5,9 @@ fh=open ("csvelement.csv",'r')
 for i in fh:
 	newi=i.rstrip()
 	data=newi.split(',')
-	print data[0],data[1]
+	print data[0]
+	print data[1]
+	
 	
 	
 	
