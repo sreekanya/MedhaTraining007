@@ -1,6 +1,6 @@
 # using list finding element in yahoo login
 
-fh=open ("csvelement.txt",'r')
+fh=open ("csvelement.csv",'r')
 
 for i in fh:
 	newi=i.rstrip()
