@@ -34,4 +34,4 @@ for i in fileHandle:
             print "able to find ",myList[0],myList[1]
           
 
-        
+br.close()        
