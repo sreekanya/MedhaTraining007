@@ -5,6 +5,8 @@ import sys
 
 browserselection = sys.argv[1]
 
+# this function will take the browser type and return the browser object based on browser selection
+
 def getBrowser(browserType):
 	if(browserType=="chrome"):
 		chromebr = webdriver.ChromeOptions()
@@ -14,12 +16,12 @@ def getBrowser(browserType):
 		browser = webdriver.Firefox()
 	return browser
 
-br = getBrowser(browserselection)
-
-br.get("https://mail.yahoo.com")
-
+br = getBrowser(browserselection) # trying to open the browser based on user selection in commond line
+br.get("https://mail.yahoo.com")   
 br.implicitly_wait(10)   # I am trying to wait for page to load for 10second to make sure all the elements are loadded
 
+
+# trying to find user name element and enter user name into username filed
 try:
 	uname = br.find_element_by_id("username")
 except:
@@ -27,9 +29,12 @@ except:
 else:
 	uname.send_keys("naninice2000")
 
+# Clicking on signin button without entering password so that we can get error message.
 
 signinbutton  = br.find_element_by_id(".save")
 signinbutton.click()
+
+# getting the page source and then finding specific text inside that page source
 
 pageHTMLSource = br.page_source
 
