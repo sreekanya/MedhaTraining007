@@ -43,6 +43,7 @@ br = webdriver.Firefox()
 br.get(webpageURL)
 
 for eachdata in testDataMap.keys():
+	print eachdata
 	if(eachdata == "id"):
 		testElementByID(br,testDataMap[eachdata])
 	else:
