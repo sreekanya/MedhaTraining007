@@ -15,4 +15,11 @@ else: # Once after finding Element we are tring to move mouse to that element us
 	actions = ActionChains(br)
 	actions.move_to_element(cloudMenuElement)
 	actions.perform()
+	#br.implicitly_wait(20)
 
+try:
+	br.find_element_by_link_text("Tools")
+except:
+	print "not able to find Tools sub menu option"
+else:
+	print "able to find Tools sub menu option"
