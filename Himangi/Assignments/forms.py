@@ -3,24 +3,28 @@ from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 
 br = webdriver.Firefox()
-
 br.get("https://gmail.com")
-try:
-    uname=br.find_element_by_id("Email")
-except:
-    print "not able to find the field"
-else:
-    uname.send_keys("pythonclass14")
-try:
-    pwd=br.find_element_by_id("Passwd")
-except:
-    print "not able to find the field", pwd
-else:
-    pwd.send_keys("python2014")
 
-getbut = br.find_element_by_id("signIn")
-getbut.click()
-br.implicitly_wait(15)
+def login(br):
+    try:
+        uname=br.find_element_by_id("Email")
+    except:
+        print "not able to find the field"
+    else:
+        uname.send_keys("pythonclass14")
+    try:
+        pwd=br.find_element_by_id("Passwd")
+    except:
+        print "not able to find the field", pwd
+    else:
+        pwd.send_keys("python2014")
+
+    getbut = br.find_element_by_id("signIn")
+    getbut.click()
+    br.implicitly_wait(15)
+
+login(br)
+
 #try:
 #    signoutElement = br.find_element_by_partial_link_text("pythonclass14@gmail.com")
    
@@ -29,7 +33,7 @@ br.implicitly_wait(15)
 #    print "not able to find Menu item sign out"
 #else: # Once after finding Element we are tring to move mouse to that element using ActionChain modules and functionality
 #     signoutElement.click()
-br.implicitly_wait(15)
+#br.implicitly_wait(15)
 
 try:
     inboxBut= br.find_elements_by_name("Himangi Sathaye")
@@ -58,11 +62,13 @@ else:
     br.implicitly_wait(25)
     #print writeInput
     writeInput.send_keys("Hi there")
+    br.send_keys("Ctrl-Enter")
+
     
 
 try:
     br.implicitly_wait(30)
-    sendBut= br.find_element_by_class_name("T-I J-J5-Ji aoO T-I-atl L3 T-I-JO T-I-Zf-aw2")
+    sendBut= br.find_element_by_role_name("button")
                                      
 except:
     print "No button found"
@@ -70,12 +76,12 @@ else:
     br.implicitly_wait(20)
     sendBut.click()
    
-#try:
- #   signoutBut= br.find_element_by_id("gb_71")
-#except:
- #   print "No element found"
-#else:
- #   signoutBut.click()
+try:
+    signoutBut= br.find_element_by_id("gb_71")
+except:
+    print "No element found"
+else:
+    signoutBut.click()
 
 #try:
  #   signoutElement = br.find_element_by_partial_link_text("pythonclass14@gmail.com")
