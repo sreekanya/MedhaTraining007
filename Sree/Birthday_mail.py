@@ -11,48 +11,63 @@ list_mail=[]
 today=[]
 mail=''
 
+
+def checkAndSetText(browser, element, text):
+	try:
+		foundElement = browser.find_element_by_xpath(element)
+	except: 
+		print "not able to find element with id ",element
+	else:
+		foundElement.send_keys(text)
+		browser.implicitly_wait(10000)
+	
+	
+
 def log_in():
 	browser=webdriver.Chrome()
 	browser.implicitly_wait(20)
 	browser.get("http://gmail.com")
-	browser.implicitly_wait(20)
+	browser.implicitly_wait(50)
 	
 	email=browser.find_element_by_id("Email")
 	email.send_keys("einfoteam@gmail.com")
-	browser.implicitly_wait(20)
+	browser.implicitly_wait(90)
 	
 	pass_wd=browser.find_element_by_id("Passwd")
 	pass_wd.send_keys("einfoteam123")
-	browser.implicitly_wait(20)
+	browser.implicitly_wait(90)
 	
 	s_in=browser.find_element_by_id("signIn")
 	s_in.click()
 	
-	browser.implicitly_wait(50)
+	browser.implicitly_wait(350)
 	
 	click_comp=browser.find_element_by_xpath("/html/body/div[7]/div[3]/div/div[2]/div[1]/div[1]/div[1]/div[2]/div/div/div[1]/div/div").click()
-	browser.implicitly_wait(90)
+	browser.implicitly_wait(3500)
 
-	mail_to=browser.find_element_by_id(':ae')
-	mail_to.send_keys(mail)
-	print "mail_to", mail
-	browser.implicitly_wait(60)
+	mail_to='//*[@id=":ap"]'
+	checkAndSetText(browser, mail_to, mail)
+	browser.implicitly_wait(3500)
 
-	sub=browser.find_element_by_id(':9m')
-	sub.send_keys("Birthday Mail")
-	browser.implicitly_wait(60)
+	sub='//*[@id=":aa"]'
+	text="Birthday Mail"
+	checkAndSetText(browser, sub, text)
+	browser.implicitly_wait(3500)
 
-	body1=browser.find_element_by_id(':ao')
-	body1.send_keys("Happy Birthday To You")
-	browser.implicitly_wait(100)
+	body1='//*[@id=":bc"]'
+	text="Happy Birthday To You"
+	checkAndSetText(browser, body1, text)
+	browser.implicitly_wait(3500)
 	
-	send=browser.find_element_by_id(':9c').click()
-	browser.implicitly_wait(60)
+	send=browser.find_element_by_xpath('//*[@id=":a0"]').click()
+	browser.implicitly_wait(350)
 	print browser.title
 	
 	logo=browser.find_element_by_xpath("//*[@id='gb']/div[1]/div[1]/div[2]/div[5]/div[1]/a/span").click()
+	browser.implicitly_wait(4500)
 	
-	browser.implicitly_wait(100)
+	browser.find_element_by_xpath('//*[@id="gb_71"]').click()
+	browser.implicitly_wait(4500)
 	
 	browser.quit()
 	
