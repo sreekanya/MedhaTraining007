@@ -1,0 +1,6 @@
+title,tagname,Gmail
+logo,class,logo
+mail,id,Email
+pass,id,Passwd
+submit,id,signIn
+check,id,PersistentCookie
