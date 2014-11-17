@@ -1,0 +1,7 @@
+Test[
+  {
+    "server": "medhaws.cloudapp.net",
+    "port": "3000",
+    "path": "/inventory/search"
+  }
+]
