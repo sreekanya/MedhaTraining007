@@ -1,0 +1,21 @@
+[
+  {
+    "_id": "545e3d3f41bb47560511f182",
+    "name": "kingfisher",
+    "year": "2014",
+    "grapes": "NA",
+    "country": "India",
+    "region": "Karnataka",
+    "category": "Beer",
+    "description": "A resurgence of interest in boutique vineyards...",
+    "merchantId": "merchant001",
+    "picture": "lan_rioja.jpg"
+  },
+  {
+    "_id": "545fa2f349a9d25805f68e02",
+    "name": "Bud Light",
+    "country": "USA",
+    "merchantId": "merchant001",
+    "category": "Beer"
+  }
+]

@@ -6,6 +6,11 @@ import json
 import re
 import sys
 
+import get_mod
+import set_path
+from get_mod import Get_data
+from set_path import GetRequest
+
 commandLineInputs = sys.argv
 expectedDataFileName = ""
 configFileName = ""
@@ -16,49 +21,55 @@ env=""
 def post_data():
 	pass
 
-def get_data(env,configFileName,method,expectedDataFileName,parameters):
-	print "Reading the get data"
+def get_req(env,configFileName,method,expectedDataFileName,parameters):
+	print "Reading the get data............."
 	print "expecteddatafile : ",expectedDataFileName
 	print "configFileName  : ",configFileName
 	print "parameters  :",parameters
 	print "method  : ",method
 	print "env  :",env
 	
-	with open(configFileName) as data_file: 
-		data=json.load(data_file)
-	print data
-	
-		
-	#read_json()
-	
+	path=GetRequest()
+	url=path.complete_path(configFileName)
+	print "final url  : ",url
+	g=Get_data()
+	#url=g.server_path(expectedDataFileName)
+	g.get_method(url,parameters,expectedDataFileName)
 
 def checkInputs(commandLineInputs):
-	if(len(commandLineInputs)<6):
-		print "please enter nessasary inputs.. existing the test....!!! "
-		sys.exit()
+	if((len(commandLineInputs)==5)or(len(commandLineInputs)==6)):
+		for i in commandLineInputs[1:]:
+			inputs = i.split('=')
+			if(inputs[0]=="-expected"):
+				expectedDataFileName = inputs[1]
+			elif(inputs[0]=="-config"):
+				configFileName = inputs[1]
+			elif(inputs[0]=="-env"):
+				env=inputs[1]
+			elif(inputs[0]=="-method"):
+				method=inputs[1]
+			elif(inputs[0]=="-parameter"):
+				parameters=inputs[1]
+			else:
+				print "unknown parameter... "
+				sys.exit()
 	else:
-		print "processing your data and starting the test..."
-
-	for i in commandLineInputs[1:]:
-		inputs = i.split('=')
-		if(inputs[0]=="-expected"):
-			expectedDataFileName = inputs[1]
-		elif(inputs[0]=="-config"):
-			configFileName = inputs[1]
-			#print configFileName
-		elif(inputs[0]=="-env"):
-			env=inputs[1]
-		elif(inputs[0]=="-method"):
-			method=inputs[1]
-		elif(inputs[0]=="-parameter"):
-			parameters=inputs[1]
-		else:
-			print "unknow parameter... "
+			print """please enter nessasary inputs.. existing the test....!!!  
+				-config='ConfigFileName'
+				-env='test/dev/prod'
+				-method='get/post'
+				-parameter='parameter csv file'
+				-expected='expected result file for get data' """
 			sys.exit()
+	
+	print "processing your data and starting the test..."
+
+	
 	if(method=="get"):
-		get_data(env,configFileName,method,expectedDataFileName,parameters)
+		get_req(env,configFileName,method,expectedDataFileName,parameters)
 	if(method=="post"):
 		post_data()
 			
 	sys.exit()
+	
 checkInputs(commandLineInputs)

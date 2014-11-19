@@ -1,6 +1,6 @@
-Test[
+[
   {
-    "server": "medhaws.cloudapp.net",
+    "server": "http://medhaws.cloudapp.net",
     "port": "3000",
     "path": "/inventory/search"
   }
