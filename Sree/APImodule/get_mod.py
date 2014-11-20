@@ -47,7 +47,7 @@ class Get_data():
 			print "Response  ",responsedata
 			
 			
-			fh = open('ResponseDataFile.json','a')
+			fh = open('ResponseDataFile.json','w')
 			fh.write(responsedata)
 			fh.close()
 		#print "Response  ",responsedata
