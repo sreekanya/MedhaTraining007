@@ -1,31 +1,5 @@
 [
   {
-    "_id": "545e3d3f41bb47560511f180",
-    "name": "CHATEAU DE SAINT COSME",
-    "year": "2009",
-    "grapes": "Grenache / Syrah",
-    "country": "France",
-    "region": "Southern Rhone",
-    "category": "Wine",
-    "description": "The aromas of fruit and spice...",
-    "merchantId": "merchant001",
-    "picture": "saint_cosme.jpg"
-  }
-][
-  {
-    "_id": "545e3d3f41bb47560511f180",
-    "name": "CHATEAU DE SAINT COSME",
-    "year": "2009",
-    "grapes": "Grenache / Syrah",
-    "country": "France",
-    "region": "Southern Rhone",
-    "category": "Wine",
-    "description": "The aromas of fruit and spice...",
-    "merchantId": "merchant001",
-    "picture": "saint_cosme.jpg"
-  }
-][
-  {
     "_id": "545e3d3f41bb47560511f182",
     "name": "kingfisher",
     "year": "2014",

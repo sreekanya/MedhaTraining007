@@ -8,8 +8,10 @@ import sys
 
 import get_mod
 import set_path
+import post_mod
 from get_mod import Get_data
 from set_path import GetRequest
+#from post_mod import 
 
 commandLineInputs = sys.argv
 expectedDataFileName = ""
@@ -19,7 +21,12 @@ method=""
 env=""
 
 def post_data():
-	pass
+	path=GetRequest()
+	url=path.complete_path(configFileName)
+	print "final url  : ",url
+	p=Post_data()
+	#url=g.server_path(expectedDataFileName)
+	p.post_method(url,parameters)
 
 def get_req(env,configFileName,method,expectedDataFileName,parameters):
 	print "Reading the get data............."
