@@ -1,0 +1,1 @@
+create TABLE Medicalhistory ( reason VARCHAR(200),syptoms varchar(250),medication varchar(100),history varchar(200),allergies varchar(100));

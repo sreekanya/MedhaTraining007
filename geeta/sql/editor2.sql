@@ -1,0 +1,1 @@
+alter TABLE doctorcalender ADD COLUMN (slot1 varchar(15),slot2 varchar(15),slot3 varchar(15),slot4 varchar(15),slot5 varchar(15))

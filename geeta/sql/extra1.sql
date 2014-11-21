@@ -1,0 +1,10 @@
+update profile1 SET
+   FirstName = '' -- varchar(25)
+  ,LastName = '' -- varchar(30)
+  ,DOB = '' -- varchar(10)
+  ,contact = '' -- varchar(10)
+  ,Adress = '' -- varchar(100)
+  ,insurance = '' -- varchar(50)
+  ,emergencycontact = '' -- varchar(10)
+  ,slot = 0 -- int(10)
+  ,slot1 = 0 -- int(10)

@@ -1,0 +1,1 @@
+alter TABLE appointment DROP COLUMN slot4
