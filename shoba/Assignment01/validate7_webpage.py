@@ -26,7 +26,7 @@ br.get(webpageURL)
 
 def testElementBytitle(br,v1):
     try:
-        title= br.find_element_by_xpath(v1)
+        title= br.find_element_by_link_text(v1)
     except:
         print "unable to find the element title"
     else:
@@ -35,7 +35,7 @@ def testElementBytitle(br,v1):
         br.implicitly_wait(10)
 def testElementByusername(br,v2):
     try:
-        uname= br.find_element_by_xpath(v3)
+        uname= br.find_element_by_id(v3)
     except:
         print "unable to find the element username"
     else:
