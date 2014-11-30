@@ -25,7 +25,7 @@ br.get(webpageURL)
 
 def testElementBytitle(br,v1):
 	try:
-		title= br.find_element_by_xpath(v1)
+		title= br.find_element_by_xpath()
 	except:
 		print "unable to find the element title"
 	else:
