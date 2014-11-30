@@ -1,0 +1,1 @@
+create TABLE profile(name char(52), lastname char(52), emailID char(52), DOB int(8), address char(100), contactNo int(10),insuranceInfo char (100), emergencyContactName char(52), emergencyContactNo int(10)) 

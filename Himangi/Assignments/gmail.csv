@@ -1,0 +1,11 @@
+id,Email
+classname,lang-chooser
+name,passwd
+name,signIn
+linktext,Need help?
+classname,logo
+classname,banner
+xpath,/html/body/div/div[2]/div[2]/form/label[3]/input
+xpath,/html/body/div/div[3]/div/ul/li/a
+xpath,/html/body/div/div[3]/div/ul/li[2]/a
+xpath,/html/body/div/div[3]/div/ul/li[3]/a
