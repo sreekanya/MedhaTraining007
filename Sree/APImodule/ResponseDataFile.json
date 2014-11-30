@@ -1,24 +1,4 @@
-[
-  {
-    "_id": "545e3d3f41bb47560511f182",
-    "name": "kingfisher",
-    "year": "2014",
-    "grapes": "NA",
-    "country": "India",
-    "region": "Karnataka",
-    "category": "Beer",
-    "description": "A resurgence of interest in boutique vineyards...",
-    "merchantId": "merchant001",
-    "picture": "lan_rioja.jpg"
-  },
-  {
-    "_id": "545fa2f349a9d25805f68e02",
-    "name": "Bud Light",
-    "country": "USA",
-    "merchantId": "merchant001",
-    "category": "Beer"
-  }
-][
+http://medhaws.cloudapp.net:3000/inventory/search?categoryname=Wine&merchant=merchant001[
   {
     "_id": "545e3d3f41bb47560511f180",
     "name": "CHATEAU DE SAINT COSME",
@@ -31,7 +11,7 @@
     "merchantId": "merchant001",
     "picture": "saint_cosme.jpg"
   }
-][
+]Result Passedhttp://medhaws.cloudapp.net:3000/inventory/search?categoryname=Beer&merchant=merchant001[
   {
     "_id": "545e3d3f41bb47560511f182",
     "name": "kingfisher",
@@ -51,37 +31,4 @@
     "merchantId": "merchant001",
     "category": "Beer"
   }
-][
-  {
-    "_id": "545e3d3f41bb47560511f180",
-    "name": "CHATEAU DE SAINT COSME",
-    "year": "2009",
-    "grapes": "Grenache / Syrah",
-    "country": "France",
-    "region": "Southern Rhone",
-    "category": "Wine",
-    "description": "The aromas of fruit and spice...",
-    "merchantId": "merchant001",
-    "picture": "saint_cosme.jpg"
-  }
-][
-  {
-    "_id": "545e3d3f41bb47560511f182",
-    "name": "kingfisher",
-    "year": "2014",
-    "grapes": "NA",
-    "country": "India",
-    "region": "Karnataka",
-    "category": "Beer",
-    "description": "A resurgence of interest in boutique vineyards...",
-    "merchantId": "merchant001",
-    "picture": "lan_rioja.jpg"
-  },
-  {
-    "_id": "545fa2f349a9d25805f68e02",
-    "name": "Bud Light",
-    "country": "USA",
-    "merchantId": "merchant001",
-    "category": "Beer"
-  }
-]
+]Result PassedResult Passed

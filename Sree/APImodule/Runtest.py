@@ -6,12 +6,14 @@ import json
 import re
 import sys
 
+#importing modules and their classes
+
 import get_mod
 import set_path
 import post_mod
 from get_mod import Get_data
 from set_path import GetRequest
-#from post_mod import 
+from post_mod import Post_data
 
 commandLineInputs = sys.argv
 expectedDataFileName = ""
@@ -20,12 +22,19 @@ parameters=""
 method=""
 env=""
 
-def post_data():
+def post_data(env,configFileName,method,parameters):
+
+#Creating 'path' object for GetRequest class which is in set_path module
 	path=GetRequest()
+	
+#calling complete_path method with the path object .
 	url=path.complete_path(configFileName)
 	print "final url  : ",url
+	
+#creating object 'p' for Post_data class in post_mod module
 	p=Post_data()
-	#url=g.server_path(expectedDataFileName)
+	
+#calling post_method method with object p
 	p.post_method(url,parameters)
 
 def get_req(env,configFileName,method,expectedDataFileName,parameters):
@@ -35,12 +44,18 @@ def get_req(env,configFileName,method,expectedDataFileName,parameters):
 	print "parameters  :",parameters
 	print "method  : ",method
 	print "env  :",env
-	
+
+#Creating 'path' object for GetRequest class which is in set_path module	
 	path=GetRequest()
+	
+#calling complete_path method with the path object .
 	url=path.complete_path(configFileName)
 	print "final url  : ",url
+	
+#creating object 'g' for Get_data class in get_mod module	
 	g=Get_data()
-	#url=g.server_path(expectedDataFileName)
+
+#calling get_method method with object g	
 	g.get_method(url,parameters,expectedDataFileName)
 
 def checkInputs(commandLineInputs):
@@ -75,7 +90,7 @@ def checkInputs(commandLineInputs):
 	if(method=="get"):
 		get_req(env,configFileName,method,expectedDataFileName,parameters)
 	if(method=="post"):
-		post_data()
+		post_data(env,configFileName,method,parameters)
 			
 	sys.exit()
 	
