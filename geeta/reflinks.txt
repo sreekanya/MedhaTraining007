@@ -1,1 +1,0 @@
-https://confluence.atlassian.com/display/STASH/Basic+Git+commands

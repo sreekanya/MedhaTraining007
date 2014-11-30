@@ -1,1 +1,0 @@
-create TABLE Doctorcalender(FirstName VARCHAR(20),LastName varchar(25),accno varchar(10),date varchar(10),time varchar (200),comments varchar (250));

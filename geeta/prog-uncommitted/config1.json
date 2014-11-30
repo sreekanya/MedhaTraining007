@@ -1,7 +1,0 @@
-[
-  {
-    "server": "http://medhaws.cloudapp.net",
-    "port": "3000",
-    "path": "/inventory/additems"
-  }
-]

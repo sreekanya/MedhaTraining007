@@ -1,1 +1,0 @@
-insert into profile1 (FirstName) values ()

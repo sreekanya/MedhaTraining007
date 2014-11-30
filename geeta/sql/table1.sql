@@ -1,1 +1,0 @@
-create TABLE logindetails (username varchar(50),password varchar(40),account varchar(20));
