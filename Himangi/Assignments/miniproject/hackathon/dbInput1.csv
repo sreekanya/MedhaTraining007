@@ -1,2 +1,0 @@
-profile,name,No,char,char(20),PRI,auto_increament
-profile,accountNum,No,int,int(11),PRI,auto_increament
