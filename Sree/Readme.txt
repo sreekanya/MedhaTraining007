@@ -1,0 +1,1 @@
+All the Assignments and Mini projects are pushed as individaul directories.
